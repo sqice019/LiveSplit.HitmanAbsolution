@@ -13,9 +13,9 @@ Features
 Requirements
 ------------
 
-  * Hitman: Absolution on Steam (Cracked and previous versions are not supported)
-  * LiveSplit 1.4+
-  * .NET Framework 4  
+  * Hitman: Absolution on GOG or Steam (GOG is preferred)
+  * LiveSplit 
+  * .NET Framework 4.8.1 Runtime  
 ------------
 ! This is a fork of the original repo with the improved GOG Support.
 ------------
