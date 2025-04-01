@@ -41,4 +41,4 @@ Credits
   * [SuicideMachine](http://twitch.tv/suimachine)
   * [DrTChops](http://twitch.tv/drtchops) 
   * Plugin is based off [LiveSplit.Dishonored](https://github.com/fatalis/LiveSplit.Dishonored) by [Fatalis](http://twitch.tv/fatalis_).
-  * sqice
+    
