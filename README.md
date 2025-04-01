@@ -1,4 +1,4 @@
-﻿LiveSplit.HMA v1.0.0
+﻿LiveSplit.HMA v1.0.1
 =====================
 
 LiveSplit.HMA is a [LiveSplit](http://livesplit.org/) component for Hitman: Absolution.
