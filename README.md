@@ -22,8 +22,11 @@ Requirements
 Install
 -------
 Close LiveSplit completely.
+
 Download the plugin from the [releases page](https://github.com/sqice019/LiveSplit.HitmanAbsolution/releases)
+
 Replace the old LiveSplit.HMA.dll file located in your LiveSplit\Components folder with the new one.
+
 Restart LiveSplit. Your existing layout should pick it up automatically.
 
 Configure
