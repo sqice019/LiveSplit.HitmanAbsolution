@@ -16,12 +16,15 @@ Requirements
   * Hitman: Absolution on Steam (Cracked and previous versions are not supported)
   * LiveSplit 1.4+
   * .NET Framework 4  
-
+------------
+! This is a fork of the original repo with the improved GOG Support.
+------------
 Install
 -------
-Starting with LiveSplit 1.4, you can download and install LiveSplit.HMA automatically from within the Splits Editor with just one click. Just type in "Hitman: Absolution" and click Activate. This downloads LiveSplit.HMA to the Components folder.
-
-If the plugin is not working with this process, download the plugin from the [releases page](https://github.com/SuiMachine/LiveSplit.HitmanAbsolution/releases) and place the LiveSplit.HMA.dll in your Components directory of LiveSplit.
+Close LiveSplit completely.
+Download the plugin from the [releases page](https://github.com/sqice019/LiveSplit.HitmanAbsolution/releases)
+Replace the old LiveSplit.HMA.dll file located in your LiveSplit\Components folder with the new one.
+Restart LiveSplit. Your existing layout should pick it up automatically.
 
 Configure
 ---------
