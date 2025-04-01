@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LiveSplit.HMA</RootNamespace>
     <AssemblyName>LiveSplit.HMA</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiveSplit.Core">
-      <HintPath>C:\LiveSplit\LiveSplit.Core.dll</HintPath>
+      <HintPath>..\..\Speedruns\LiveSplit_1.8.21\LiveSplit.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,7 +44,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="UpdateManager">
-      <HintPath>C:\LiveSplit\UpdateManager.dll</HintPath>
+      <HintPath>..\..\Speedruns\LiveSplit_1.8.21\UpdateManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

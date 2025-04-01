@@ -93,6 +93,7 @@ namespace LiveSplit.HMA
         private DeepPointer _Level;
         private DeepPointer _Section;
         private DeepPointer _IsResultScreen;
+        private DeepPointer _isInGogLoadingScreen;
         private bool isGOGversion;
 
         private enum ExpectedDllSizes
@@ -200,8 +201,10 @@ namespace LiveSplit.HMA
                     int prevSection=0;
 
                     bool prevIsResultScreen = false;
+                    bool prevIsInGogLoadingScreen = false;
 
                     bool IsInLoadingScreen, IsInMenu, IsOutOfFocus, IsRosewoodCutscene, IsResultScreen, IsFinaleExplosion;
+                    bool IsInGogLoadingScreen = false;
                     int CurrentLevel, CurrentSection, IsTerminusElevatorLoading;
 
                     while (!game.HasExited)
@@ -215,10 +218,10 @@ namespace LiveSplit.HMA
                         _Section.Deref(game, out CurrentSection);
                         _IsResultScreen.Deref(game, out IsResultScreen);
                         _IsFinaleExplosion.Deref(game, out IsFinaleExplosion);
-
+          
                         if (isGOGversion)
                             IsOutOfFocus = !IsOutOfFocus;
-
+                            _isInGogLoadingScreen.Deref(game, out IsInGogLoadingScreen);
                         if(CurrentLevel != prevLevel || CurrentSection != prevSection || IsResultScreen != prevIsResultScreen || IsTerminusElevatorLoading != prevIsTerminusElevatorLoading || IsFinaleExplosion != prevIsFinaleExplosion)              //All of the level splits
                         {
                             if(CurrentLevel == 0 && CurrentSection == 1)
@@ -438,10 +441,10 @@ namespace LiveSplit.HMA
                                 Split(SplitArea.C25_Crematorium, frameCounter);
                             }
                         }
-
-                        if (IsInLoadingScreen != prevIsInLoadingScreen || IsInMenu != prevIsInMenu || IsOutOfFocus != prevIsOutOfFocus || IsTerminusElevatorLoading != prevIsTerminusElevatorLoading || IsRosewoodCutscene != prevIsRosewoodCutscene || CurrentLevel != prevLevel || CurrentSection != prevSection)
+                        bool gogLoadChanged = isGOGversion && (IsInGogLoadingScreen != prevIsInGogLoadingScreen);
+                        if (IsInLoadingScreen != prevIsInLoadingScreen || IsInMenu != prevIsInMenu || IsOutOfFocus != prevIsOutOfFocus || IsTerminusElevatorLoading != prevIsTerminusElevatorLoading || IsRosewoodCutscene != prevIsRosewoodCutscene || CurrentLevel != prevLevel || CurrentSection != prevSection ||IsResultScreen != prevIsResultScreen || gogLoadChanged)
                         {
-                            if (IsInLoadingScreen == true || IsRosewoodCutscene == true)
+                            if (IsInLoadingScreen == true || IsRosewoodCutscene == true || IsResultScreen == true || (isGOGversion && IsInGogLoadingScreen == true))
                                 isActuallyLoading = true;
                             else
                             {
@@ -528,6 +531,7 @@ namespace LiveSplit.HMA
                         prevSection = CurrentSection;
                         prevIsResultScreen = IsResultScreen;
                         prevIsFinaleExplosion = IsFinaleExplosion;
+                        prevIsInGogLoadingScreen = IsInGogLoadingScreen;
 
                         frameCounter++;
 
@@ -586,7 +590,7 @@ namespace LiveSplit.HMA
             else if(mainModuleMemorySize == (int)ExpectedDllSizes.HMAGOG)
             {
                 isGOGversion = true;
-                _IsInLoadingScreen = new DeepPointer(0xC96750);         //not actual, but close enough
+                _IsInLoadingScreen = new DeepPointer(0xC96750);         //not actual, but close enough + added gog specific address for loads
                 _IsRosewoodCutscene = new DeepPointer(0xC8827C);
                 _IsInMenu = new DeepPointer(0xCA983B);
                 _IsOutOfFocus = new DeepPointer(0xC9687C);
@@ -596,9 +600,9 @@ namespace LiveSplit.HMA
 
                 _Level = new DeepPointer(0xD68B08);         //0 for first level, some never used
                 _Section = new DeepPointer(0xCA8B74);
-                _IsResultScreen = new DeepPointer(0xCA983D);
-                
-            }
+                _IsResultScreen = new DeepPointer(0xD68FA8);
+                _isInGogLoadingScreen = new DeepPointer(0xCAC6D0);
+      }
             else 
             {
                 _ignorePIDs.Add(game.Id);
