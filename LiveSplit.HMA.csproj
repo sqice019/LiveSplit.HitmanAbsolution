@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="LiveSplit.Core">
-      <HintPath>..\..\Speedruns\LiveSplit_1.8.21\LiveSplit.Core.dll</HintPath>
+      <HintPath>..\..\..\..\Speedruns\LiveSplit_1.8.21\LiveSplit.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -44,7 +44,7 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="UpdateManager">
-      <HintPath>..\..\Speedruns\LiveSplit_1.8.21\UpdateManager.dll</HintPath>
+      <HintPath>..\..\..\..\Speedruns\LiveSplit_1.8.21\UpdateManager.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

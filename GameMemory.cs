@@ -219,9 +219,9 @@ namespace LiveSplit.HMA
                         _IsResultScreen.Deref(game, out IsResultScreen);
                         _IsFinaleExplosion.Deref(game, out IsFinaleExplosion);
           
-                        if (isGOGversion)
+                        if (isGOGversion) { 
                             IsOutOfFocus = !IsOutOfFocus;
-                            _isInGogLoadingScreen.Deref(game, out IsInGogLoadingScreen);
+                            _isInGogLoadingScreen.Deref(game, out IsInGogLoadingScreen); }
                         if(CurrentLevel != prevLevel || CurrentSection != prevSection || IsResultScreen != prevIsResultScreen || IsTerminusElevatorLoading != prevIsTerminusElevatorLoading || IsFinaleExplosion != prevIsFinaleExplosion)              //All of the level splits
                         {
                             if(CurrentLevel == 0 && CurrentSection == 1)
