@@ -1,4 +1,4 @@
-﻿LiveSplit.HMA v1.0.0
+﻿LiveSplit.HMA v1.0.1
 =====================
 
 LiveSplit.HMA is a [LiveSplit](http://livesplit.org/) component for Hitman: Absolution.
@@ -13,17 +13,20 @@ Features
 Requirements
 ------------
 
-  * Hitman: Absolution on Steam (Cracked and previous versions are not supported)
-  * LiveSplit 1.4+
-  * .NET Framework 4  
+  * Hitman: Absolution on GOG or Steam (GOG is preferred)
+  * LiveSplit 
+  * .NET Framework 4.8.1 Runtime  
 ------------
 ! This is a fork of the original repo with the improved GOG Support.
 ------------
 Install
 -------
 Close LiveSplit completely.
+
 Download the plugin from the [releases page](https://github.com/sqice019/LiveSplit.HitmanAbsolution/releases)
+
 Replace the old LiveSplit.HMA.dll file located in your LiveSplit\Components folder with the new one.
+
 Restart LiveSplit. Your existing layout should pick it up automatically.
 
 Configure
@@ -36,5 +39,6 @@ After configuring everything you'll most likely want to turn on game time as pri
 Credits
 -------
   * [SuicideMachine](http://twitch.tv/suimachine)
-  * [DrTChops](http://twitch.tv/drtchops) for helping me with it.
+  * [DrTChops](http://twitch.tv/drtchops) 
   * Plugin is based off [LiveSplit.Dishonored](https://github.com/fatalis/LiveSplit.Dishonored) by [Fatalis](http://twitch.tv/fatalis_).
+    
