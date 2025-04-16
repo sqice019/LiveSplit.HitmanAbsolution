@@ -65,7 +65,7 @@ namespace LiveSplit.HMA
 
         public string UpdateURL
         {
-            get { return "https://raw.githubusercontent.com/SuiMachine/LiveSplit.HitmanAbsolution/Master/"; }
+            get { return "https://raw.githubusercontent.com/sqice019/LiveSplit.HitmanAbsolution/gog-update/"; }
         }
 
         public Version Version
